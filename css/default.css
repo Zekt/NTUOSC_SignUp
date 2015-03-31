@@ -1,0 +1,44 @@
+@font-face {
+	font-family: noto;
+	src: url(fonts/NotoSansCJKtc-Regular.otf);
+}
+
+body {
+	font-family: noto;
+	background-color: #444;
+}
+
+h1 {
+	color: #FFF;
+	background-color: #222;
+	text-align: center;
+	border-radius: 10px;
+}
+
+form {
+	color: #FFF;
+	background-color: #222;
+	text-align: center;
+	padding: 20px;
+	border-radius: 10px;
+}
+
+form div {
+	text-align: left;
+	padding-top: 10px;
+	margin-left: 40px;
+}
+
+form input {
+	background-color: #666;
+	border-color: #444;
+	border-radius: 5px;
+	margin-bottom: 50px;
+}
+
+button {
+	color: #FFF;
+	background-color: #333;
+	border-color: #333;
+	border-radius: 5px;
+}

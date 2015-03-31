@@ -1,0 +1,15 @@
+#Sign {
+	margin-left: 30%;
+	width: 40%;
+}
+
+#cat {
+	height: 50%;
+	width: 50%;
+	position: inline;
+	float: right;
+}
+
+#dont {
+	position: block;
+}
