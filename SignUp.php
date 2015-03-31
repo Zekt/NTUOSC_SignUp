@@ -22,6 +22,7 @@ else{
 	<meta charset="UTF-8">
 	<title>翔子的肉雞</title>
 	<link rel="stylesheet" href="css/default.css">
+	<link rel="stylesheet" href="css/SignUp_php.css">
 </head>
 <body>
 	<?php
