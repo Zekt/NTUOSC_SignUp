@@ -1,29 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 <head>
 	<meta charset="UTF-8">
-	<title></title>
+	<title>工作站申請 | NTUOSC 臺大開源社</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/default.css">
-	<link rel="stylesheet" href="css/SignUp.css">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans" type="text/css">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow" type="text/css">
 </head>
 <body>
-	<h1>NTUOSC工作站申請ヽ(∀ﾟ )人(ﾟ∀ﾟ)人( ﾟ∀)人(∀ﾟ )人(ﾟ∀ﾟ)人( ﾟ∀)ﾉ</h1>
-	<form action="SignUp.php" method="post" id="Sign">
-		<img src="pictures/puss.jpg" alt="黑黑" id="cat">
-		<p id="dont">請不要黑我喵</p>
-		<div>
-			姓名:<br>
-			<input type="text" name="name"><br>
+	<div class="layout">
+		<header class="row">
+			<h1 class="site-name">NTUOSC 臺大開源社</h1>
+			<a href="https://ntuosc.org" class="logo"><img src="images/ntuosc-icon.png" alt="NTUOSC 臺大開源社"></a>
+			<h2 class="page-title">Account Registration <wbr>工作站申請</h2>
+		</header>
+		<div class="row">
+			<form action="SignUp.php" method="POST" class="single-form">
+				<div>
+					<label for="name-field">姓名</label>
+					<input type="text" name="name" id="name-field" maxlength="32" class="short" required>
+				</div>
+				<div>
+					<label for="user-field">帳號</label>
+					<input type="text" name="user" id="user-field" maxlength="32" class="short" required>
+				</div>
+				<div>
+					<label for="mail-field">電子郵件</label>
+					<input type="email" name="mail" id="mail-field" maxlength="256" class="long" required>
+				</div>
+				<div>
+					<label for="hack-check" class="field"><input type="checkbox" id="hack-check" checked disabled>我同意不對伺服器做黑黑行為 (=ﾟωﾟ)ﾉ</label>
+				</div>
+				<div>
+					<button type="submit" name="submit">註冊</button>
+				</div>
+			</form>
 		</div>
-		<div>
-			帳號:<br>
-			<input type="text" name="user"><br>
-		</div>
-		<div>
-			E-mail:<br>
-			<input type="text" name="mail"><br>
-		</div>
-		<button type="submit" name="submit">註冊</button>
-	</form>
+		<footer>
+			© NTUOSC 2015
+		</footer>
+	</div>
 </body>
 </html>

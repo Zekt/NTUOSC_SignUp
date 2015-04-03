@@ -1,44 +1,131 @@
-@font-face {
-	font-family: noto;
-	src: url(fonts/NotoSansCJKtc-Regular.otf);
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+/* ====== End of Normalize.css ====== */
+
+/* ====== Main stylesheet ====== */
+
+* {
+	box-sizing: border-box;
 }
 
 body {
-	font-family: noto;
-	background-color: #444;
+	background-color: white;
+	font-weight: 300;
+	font-family: 'PT Sans', 'Avenir Next', 'Roboto', 'Helvetica', 'Arial',
+	'Source Han Sans TC', 'Source Han Sans TWHK', 'Noto Sans CJK',
+	'Microsoft Jhenghei', 'Source Han Sans', 'Hiragino Sans GB', sans-serif;
 }
 
-h1 {
-	color: #FFF;
-	background-color: #222;
-	text-align: center;
-	border-radius: 10px;
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 400;
+	font-family: 'PT Sans Narrow', 'Avenir Next Condensed', 'Arial Narrow',
+	'Source Han Sans TC', 'Source Han Sans TWHK', 'Noto Sans CJK',
+	'Microsoft Jhenghei', 'Source Han Sans', 'Hiragino Sans GB', sans-serif;
 }
 
-form {
-	color: #FFF;
-	background-color: #222;
-	text-align: center;
-	padding: 20px;
-	border-radius: 10px;
+img {
+	max-width: 100%;
+	height: auto;
 }
 
-form div {
-	text-align: left;
-	padding-top: 10px;
-	margin-left: 40px;
+.layout {
+	display: block;
+	padding: 2rem;
+	width: 100%;
 }
 
-form input {
-	background-color: #666;
-	border-color: #444;
-	border-radius: 5px;
-	margin-bottom: 50px;
+.site-name {
+	display: none;
+}
+
+form > div + div {
+	margin-top: .75rem;
+}
+
+form label, input, button {
+	transition: all .28s cubic-bezier(0.4,0,.2,1);
+}
+
+form label {
+	display: block;
+}
+
+form label:focus, form label:active {
+	color: #2b9900;
+}
+
+input, .field {
+	border: 0;
+	line-height: 150%;
+	width: 100%;
+}
+
+input {
+	border-bottom: 1px #222 solid;
+	outline: none;
+	padding: .25rem .5rem;
+}
+
+input:focus, input:active {
+	border-bottom-color: #20ff57;
+}
+
+input[type='checkbox'] {
+	border: 0;
+	margin-right: .25rem;
+	padding: 0;
+	width: auto;
 }
 
 button {
-	color: #FFF;
-	background-color: #333;
-	border-color: #333;
-	border-radius: 5px;
+	background: #222;
+	border: 0;
+	border-radius: 3px;
+	color: white;
+	min-width: 5.5rem;
+	padding: .5rem .75rem;
+	width: 100%;
+}
+
+button:hover, button:active, button:focus {
+	background: #555;
+}
+
+footer {
+	bottom: 2rem;
+	line-height: 150%;
+	position: absolute;
+}
+
+@media screen and (min-width: 40rem) {
+	.layout {
+		padding-left: 14rem;
+		position: relative;
+		margin: auto;
+		max-width: 62.5rem;
+		min-height: 100vh;
+	}
+
+	.logo {
+		left: 2rem;
+		position: absolute;
+		height: 10rem;
+		width: 10rem;
+	}
+
+	.page-title {
+		margin: 0;
+		padding: .5rem 0 1rem;
+	}
+
+	input.short {
+		width: 12rem;
+	}
+
+	input.long {
+		width: 20rem;
+	}
+
+	button {
+		width: auto;
+	}
 }
