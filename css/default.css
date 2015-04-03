@@ -37,12 +37,12 @@ img {
 	display: none;
 }
 
-form {
-	position: relative;
+form > div + div {
+	margin-top: .75rem;
 }
 
-form label, input {
-	transition: all .2s ease-in;
+form label, input, button {
+	transition: all .28s cubic-bezier(0.4,0,.2,1);
 }
 
 form label {
@@ -53,37 +53,70 @@ form label:focus, form label:active {
 	color: #2b9900;
 }
 
-input {
+input, .field {
 	border: 0;
-	border-bottom: 1px #222 solid;
 	line-height: 150%;
-	margin-bottom: .5rem;
+	width: 100%;
+}
+
+input {
+	border-bottom: 1px #222 solid;
 	outline: none;
 	padding: .25rem .5rem;
-	width: 100%;
 }
 
 input:focus, input:active {
 	border-bottom-color: #20ff57;
 }
 
+input[type='checkbox'] {
+	border: 0;
+	margin-right: .25rem;
+	padding: 0;
+	width: auto;
+}
+
 button {
 	background: #222;
 	border: 0;
-	border-radius: 6px;
+	border-radius: 3px;
 	color: white;
-	margin: .5rem 0;
 	min-width: 5.5rem;
-	outline: none;
 	padding: .5rem .75rem;
 	width: 100%;
 }
 
+button:hover, button:active, button:focus {
+	background: #555;
+}
+
+footer {
+	bottom: 2rem;
+	line-height: 150%;
+	position: absolute;
+}
+
 @media screen and (min-width: 40rem) {
-	.logo img {
-		width: 10rem;
-		height: 10rem;
+	.layout {
+		padding-left: 14rem;
+		position: relative;
+		margin: auto;
+		max-width: 62.5rem;
+		min-height: 100vh;
 	}
+
+	.logo {
+		left: 2rem;
+		position: absolute;
+		height: 10rem;
+		width: 10rem;
+	}
+
+	.page-title {
+		margin: 0;
+		padding: .5rem 0 1rem;
+	}
+
 	input.short {
 		width: 12rem;
 	}
