@@ -1,18 +1,20 @@
 <?php
 $Err = false;
-if( !( isset($_POST['name'])
+if ( !( isset($_POST['name'])
 	&& isset($_POST['user'])
 	&& isset($_POST['mail'])))
 	$Err = true;
-else{
+else {
 	$name = $_POST['name'];
 	$user = $_POST['user'];
 	$mail = $_POST['mail'];
-	if(!filter_var($mail,FILTER_VALIDATE_EMAIL)){
+	if ( !(filter_var($mail,FILTER_VALIDATE_EMAIL)
+		&& preg_match('/^[^\n\r,\\<\\>]$/', $name)
+		&& preg_match('/^[A-Za-z0-9_-\\.]+$/', $user))) {
 		$Err = true;
-	}else{
+	} else {
 		$data = $name.','.$user.','.$mail."\n";
-		file_put_contents('signup.csv',$data,FILE_APPEND | LOCK_EX);
+		file_put_contents('signup.csv', $data, FILE_APPEND | LOCK_EX);
 	}
 }
 ?>
