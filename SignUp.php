@@ -10,7 +10,7 @@ else {
 	$mail = $_POST['mail'];
 	if ( !(filter_var($mail,FILTER_VALIDATE_EMAIL)
 		&& preg_match('/^[^\n\r,\\<\\>]+$/', $name)
-		&& preg_match('/^[A-Za-z0-9_-\\.]+$/', $user))) {
+		&& preg_match('/^[A-Za-z0-9_-]+$/', $user))) {
 		$Err = true;
 	} else {
 		$data = $name.','.$user.','.$mail."\n";
